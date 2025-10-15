@@ -1,6 +1,8 @@
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="bg-gradient-to-b from-primary to-blue-900 text-white py-16 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-16">
@@ -46,10 +48,15 @@ export default function Footer() {
           © 2025 Precesion Core Tech Solutions Pvt. Ltd. All Rights Reserved.
         </div>
 
-        <div className="flex gap-2 text-gray-300 text-center md:text-right">
-          <a href="#" className="hover:underline">
+        <div className="flex gap-2 cursor-pointer text-gray-300 text-center md:text-right">
+          <p
+            onClick={() => {
+              navigate("/about");
+            }}
+            className="hover:underline"
+          >
             About Us
-          </a>
+          </p>
           <span>|</span>
           <a href="#" className="hover:underline">
             Privacy Policy
