@@ -1,14 +1,13 @@
 import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@mui/material";
 
 const AnnouncementBanner = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-blue-500 text-white overflow-hidden">
-      <div className="flex items-center justify-center py-3">
-        <div className="relative w-[60vw] overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white overflow-hidden">
+      <div className="flex flex-row items-center justify-between gap-3 sm:gap-0 py-3 sm:py-4 px-4 sm:px-20">
+        <div className="relative w-full sm:w-[68vw] overflow-hidden ">
           <motion.div
-            className="whitespace-nowrap text-xs font-medium"
+            className="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-medium"
             animate={{ x: ["100%", "-100%"] }}
             transition={{
               repeat: Infinity,
@@ -18,21 +17,22 @@ const AnnouncementBanner = () => {
           >
             Uncover proof of Appinventiv's impact across 3000+ digital
             deliveries for 35+ industries.&nbsp;&nbsp;&nbsp;
-            <span className="underline text-sm mx-3">EXPLORE NOW!</span>
+            <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
+              EXPLORE NOW!
+            </span>
             &nbsp;&nbsp;&nbsp; Uncover proof of Appinventiv's impact across
             3000+ digital deliveries for 35+ industries.&nbsp;&nbsp;&nbsp;
-            <span className="underline text-sm mx-3">EXPLORE NOW!</span>
+            <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
+              EXPLORE NOW!
+            </span>
           </motion.div>
         </div>
-
-        <Button
-          sx={{ textTransform: "none" }}
-          variant="contained"
-          className="!bg-white !text-black "
-        >
-          <Phone className="w-4 h-4 mr-2" />
-          Contact Us
-        </Button>
+        <div>
+          <button className="flex items-center justify-center space-x-1 text-[0.65rem] sm:text-[0.875rem] font-medium normal-case rounded-md px-2 sm:px-4 !py-1.5 !sm:py-2 !w-36 sm:w-28 md:w-full bg-white text-blue-700 hover:bg-blue-50 transition-all">
+            <Phone className="w-4 h-4 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+            <span>Contact Us</span>
+          </button>
+        </div>
       </div>
     </div>
   );
