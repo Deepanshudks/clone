@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --background: 0 0% 100%; /* white for light theme */
-  --foreground: 240 10% 3.9%; /* dark text */
-}
+@theme {
+  --color-primary: #1a73e8; /* Example custom primary color */
+  --color-foreground: #ffffff; /* Example custom secondary color */
 
-.dark {
-  --background: 240 10% 3.9%; /* dark background */
-  --foreground: 0 0% 98%; /* light text */
+  /* You can also define shades for your custom colors */
+  --color-customGreen-100: #e6ffe6;
+  --color-customGreen-500: #4caf50;
+  --color-customGreen-900: #1b5e20;
 }
