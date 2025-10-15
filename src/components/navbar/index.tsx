@@ -72,18 +72,18 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-13 sm:top-15 left-0 right-0 z-50 bg-white text-zinc-800 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-700 rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+          <div className="flex items-center ">
+            <div className="sm:w-8 sm:h-8 h-6 w-6 bg-primary rounded-sm flex items-center justify-center">
+              <span className="text-white font-bold text-sm sm:text-xl">P</span>
             </div>
-            <span className="text-zinc-800 font-semibold text-xl">
-              appinventiv
+            <span className="text-zinc-800 font-bold text-xs pt-1 sm:text-xl">
+              recesion Core Tech Solutions Pvt. Ltd.
             </span>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex gap-4 items-center ">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -91,10 +91,10 @@ const Navbar = () => {
                 onMouseEnter={() => setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="group flex items-center space-x-1 px-4 py-2 text-sm font-medium border-b-2 border-transparent hover:border-blue-800 transition-colors w-28">
+                <button className="flex items-center py-5 gap-1 cursor-pointer text-sm hover:border-b-2 border-primary ease-in-out text-foreground hover:text-primary transition-colors w-fit ">
                   <span>{item.label}</span>
-                  <ChevronDown className="w-4 h-4 transition-transform group-hover:hidden" />
-                  <ChevronUp className="w-4 h-4 transition-transform hidden group-hover:block" />
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:hidden ease-in-out" />
+                  <ChevronUp className="w-4 h-4 transition-transform hidden group-hover:block ease-in-out" />
                 </button>
 
                 <AnimatePresence>
@@ -104,29 +104,29 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.25, ease: "easeOut" }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[750px]"
+                      className="absolute left-1/2 top-full -translate-x-1/2  w-[60vw] z-50"
                     >
-                      <div className="bg-white rounded-lg shadow-2xl mt-3 border border-gray-100 overflow-hidden">
+                      <div className="bg-white rounded-lg shadow-2xl mt-1 border border-gray-100 overflow-hidden">
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">
                           {item.dropdown.map((dropdownItem, idx) => (
                             <a
                               key={idx}
                               href={dropdownItem.link}
                               className={`block p-2 rounded-md hover:bg-blue-50 transition-colors ${
-                                dropdownItem.featured
+                                dropdownItem?.featured
                                   ? "col-span-full border-b pb-4 mb-2"
                                   : ""
                               }`}
                             >
                               <span
                                 className={`${
-                                  dropdownItem.featured
+                                  dropdownItem?.featured
                                     ? "text-base font-semibold flex items-center text-blue-700"
                                     : "text-sm text-gray-700"
                                 }`}
                               >
                                 {dropdownItem.title}
-                                {dropdownItem.featured && (
+                                {dropdownItem?.featured && (
                                   <span className="ml-2 text-blue-700">→</span>
                                 )}
                               </span>
@@ -141,7 +141,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
               className="p-2 rounded-md hover:bg-gray-100"
@@ -153,7 +152,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

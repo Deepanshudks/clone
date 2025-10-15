@@ -1,11 +1,161 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #1a73e8; /* Example custom primary color */
-  --color-foreground: #ffffff; /* Example custom secondary color */
+@layer base {
+  :root {
+    --background: 220 26% 14%;
+    --foreground: 0 0% 100%;
 
-  /* You can also define shades for your custom colors */
-  --color-customGreen-100: #e6ffe6;
-  --color-customGreen-500: #4caf50;
-  --color-customGreen-900: #1b5e20;
+    --card: 220 20% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+
+    --primary: #1163fb;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 32% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 25%;
+    --input: 217 32% 25%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --banner: 217 91% 60%;
+    --banner-foreground: 0 0% 100%;
+
+    --dropdown: 0 0% 100%;
+    --dropdown-foreground: 220 26% 14%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme {
+  --dark-mode: class;
+
+  --container-center: true;
+  --container-padding: 2rem;
+  --container-2xl: 1400px;
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-banner: hsl(var(--banner));
+  --color-banner-foreground: hsl(var(--banner-foreground));
+
+  --color-dropdown: hsl(var(--dropdown));
+  --color-dropdown-foreground: hsl(var(--dropdown-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(6px);
+    }
+  }
+
+  --animate-slide-right: slide-right 0.3s ease-in-out;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@layer utilities {
+  @keyframes move-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(6px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes move-horizontal-reverse {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-6px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-horizontal {
+    animation: move-horizontal 1s ease-in-out infinite;
+  }
+
+  .animate-horizontal-reverse {
+    animation: move-horizontal-reverse 1s ease-in-out infinite;
+  }
 }

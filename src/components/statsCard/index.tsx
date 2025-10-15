@@ -1,65 +1,25 @@
-import { Box, Container, Paper, Typography } from "@mui/material";
+import React from "react";
 
-const StatsCards = () => {
-  const stats = [
-    { number: "05", label: "Global Excellence Centers", color: "#E5D4FF" },
-    { number: "50+", label: "Awards & Certifications", color: "#E8F5D0" },
-    { number: "90%", label: "Returning Client Rate", color: "#D4F1F4" },
-    { number: "94.7%", label: "Employee Happiness Index", color: "#FFF4D4" },
-  ];
+export const StatCard = React.memo(
+  ({
+    metric,
+    title,
+    description,
+  }: {
+    metric: string;
+    title: string;
+    description: string;
+  }) => {
+    return (
+      <div className="p-4 space-y-4 border-zinc-300 h-full border-l transition-all duration-300 ">
+        <h2 className="text-2xl sm:text-4xl font-bold text-primary leading-none">
+          {metric}
+        </h2>
 
-  return (
-    <Box sx={{ py: 8, backgroundColor: "hsl(var(--background))" }}>
-      <Container maxWidth="lg">
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              sm: "repeat(2, 1fr)",
-              md: "repeat(4, 1fr)",
-            },
-            gap: 3,
-          }}
-        >
-          {stats.map((stat, index) => (
-            <Paper
-              key={index}
-              sx={{
-                p: 4,
-                backgroundColor: stat.color,
-                borderRadius: 4,
-                textAlign: "center",
-                height: "100%",
-              }}
-              elevation={0}
-            >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontWeight: 600,
-                  color: "#000",
-                  mb: 1,
-                  fontSize: { xs: "3rem", md: "4rem" },
-                }}
-              >
-                {stat.number}
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "#000",
-                  fontSize: "1rem",
-                }}
-              >
-                {stat.label}
-              </Typography>
-            </Paper>
-          ))}
-        </Box>
-      </Container>
-    </Box>
-  );
-};
+        <h3 className="text-xl font-bold text-foreground">{title}</h3>
 
-export default StatsCards;
+        <p className="text-muted text-base leading-relaxed">{description}</p>
+      </div>
+    );
+  }
+);

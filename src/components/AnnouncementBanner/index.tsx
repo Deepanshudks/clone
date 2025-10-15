@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AnnouncementBanner = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-primary text-white overflow-hidden">
       <div className="flex flex-row items-center justify-between gap-3 sm:gap-0 py-3 sm:py-4 px-4 sm:px-20">
         <div className="relative w-full sm:w-[68vw] overflow-hidden ">
           <motion.div
@@ -15,13 +15,15 @@ const AnnouncementBanner = () => {
               duration: 20,
             }}
           >
-            Uncover proof of Appinventiv's impact across 3000+ digital
-            deliveries for 35+ industries.&nbsp;&nbsp;&nbsp;
+            We design and manufacture advanced mechanical, electrical, and
+            electronic systems that power industrial and infrastructure
+            excellence. &nbsp;&nbsp;&nbsp;
             <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
               EXPLORE NOW!
             </span>
-            &nbsp;&nbsp;&nbsp; Uncover proof of Appinventiv's impact across
-            3000+ digital deliveries for 35+ industries.&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp; We design and manufacture advanced mechanical,
+            electrical, and electronic systems that power industrial and
+            infrastructure excellence. &nbsp;&nbsp;&nbsp;
             <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
               EXPLORE NOW!
             </span>

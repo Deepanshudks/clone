@@ -1,21 +1,27 @@
 import AnnouncementBanner from "../../components/AnnouncementBanner";
-import ClientLogos from "../../components/clientLogos";
+import Expertise from "../../components/Expertise";
+import Footer from "../../components/footer";
 import Hero from "../../components/hero";
 import Navbar from "../../components/navbar";
-import StatsCards from "../../components/statsCard";
-import TimelineSection from "../../components/timelineSection";
+import Partners from "../../components/partners";
+import Industries from "../../components/services";
+import StatsCards from "../../components/stats";
+import WhyChooseUs from "../../components/whyChooseUs";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white scroll-smooth">
       <AnnouncementBanner />
       <div className="pt-12">
         <Navbar />
       </div>
       <Hero />
+      <Partners />
       <StatsCards />
-      <TimelineSection />
-      <ClientLogos />
+      <Industries />
+      <Expertise />
+      <WhyChooseUs />
+      <Footer />
     </div>
   );
 };

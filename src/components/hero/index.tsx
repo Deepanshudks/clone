@@ -4,35 +4,32 @@ import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex overflow-hidden">
+    <section className="relative min-h-[85%] sm:p-20 sm:py-28 p-4 items-center flex overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={heroBackground}
           alt="Hero background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/30 backdrop-blur-xs" />
       </div>
 
-      <div className="relative z-10 max-w-[65%] flex flex-col items-start  px-6 py-40 justify-start ">
-        <h1 className="text-4xl font-light text-foreground leading-tight  animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Meet The Vision Of 1600 Humans Whose Action Built 3000+ Digital
-          Masterpieces
+      <div className=" z-10 sm:max-w-[65%] flex flex-col items-start  sm:mpx-6 pt-40 gap-3 justify-end-safe ">
+        <h1 className="sm:text-4xl text-2xl font-semibold text-foreground leading-tight  animate-in fade-in slide-in-from-bottom-4 duration-700">
+          Engineering Precision. Powering Innovation.
         </h1>
-        <p className="text-foreground text-lg  py-4 font-extralight tracking-wider">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          repellat numquam voluptatum ratione nostrum maiores enim! Assumenda a
-          minima sapiente nostrum, laboriosam atque. Quidem obcaecati, omnis
-          suscipit eum in, cumque nam alias recusandae, quia tempore soluta ea.
-          Adipisci, aliquid aperiam.
+        <p className="text-foreground sm:text-lg text-md  py-4 font-medium tracking-wide">
+          We design and manufacture advanced mechanical, electrical, and
+          electronic systems that power industrial and infrastructure
+          excellence.
         </p>
         <div>
           <Button
             variant="contained"
-            className="rounded-lg !normal-case !p-3 flex items-center gap-2 group"
+            className="!rounded-xl !normal-case !px-6 !py-3 !bg-primary  flex items-center gap-2 group"
           >
             Consult Our Experts
-            <span className="inline-block group-hover:animate-pulse">
+            <span className="inline-block transition-all duration-800 animate-horizontal">
               <ChevronRight />
             </span>
           </Button>
