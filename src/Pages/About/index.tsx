@@ -1,14 +1,19 @@
-import { Clock } from "lucide-react";
+import AnnouncementBanner from "../../components/announcementBanner";
+import Navbar from "../../components/navbar";
+import AboutHero from "../../components/aboutHero";
+import AboutSection from "../../components/aboutSection";
+import ClientLogos from "../../components/clientLogos";
+import TimelineSection from "../../components/timelineSection";
 
 const About = () => {
   return (
-    <div className=" h-screen w-screen text-center items-center flex justify-center text-primary">
-      <span className="px-2">
-        {" "}
-        <Clock />{" "}
-      </span>
-      {"  "}
-      maintenance
+    <div className="min-h-screen bg-white scroll-smooth">
+      <AnnouncementBanner />
+      <Navbar />
+      <AboutHero />
+      <AboutSection />
+      <TimelineSection />
+      <ClientLogos />
     </div>
   );
 };

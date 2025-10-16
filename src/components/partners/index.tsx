@@ -14,7 +14,7 @@ const Partners = () => {
         {sources.map((src, index) => (
           <div
             key={index}
-            className="flex items-center justify-center gap-24 flex-shrink-0"
+            className="flex items-center justify-center gap-18 flex-shrink-0"
           >
             <img
               src={src}
