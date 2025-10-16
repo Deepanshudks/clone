@@ -7,7 +7,7 @@ const AnnouncementBanner = () => {
       <div className="flex flex-row items-center justify-between gap-3 sm:gap-0 py-3 sm:py-4 px-4 sm:px-20">
         <div className="relative w-full sm:w-[68vw] overflow-hidden ">
           <motion.div
-            className="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-medium"
+            className="whitespace-nowrap text-xs md:text-sm font-medium"
             animate={{ x: ["100%", "-100%"] }}
             transition={{
               repeat: Infinity,

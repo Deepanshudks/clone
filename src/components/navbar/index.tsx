@@ -78,20 +78,26 @@ const Navbar = () => {
             <div className="sm:w-8 sm:h-8 h-6 w-6 bg-primary rounded-sm flex items-center justify-center">
               <span className="text-white font-bold text-sm sm:text-xl">P</span>
             </div>
-            <span className="text-zinc-800 font-bold text-xs pt-1 sm:text-xl">
+            <span className="text-zinc-800 font-bold text-md pt-1 sm:text-xl">
               recesion Core Tech Solutions Pvt. Ltd.
             </span>
+            {/* <div className="sm:w-8 sm:h-8 h-6 w-6 bg-primary rounded-sm flex items-center justify-center">
+              <span className="text-white font-bold text-sm sm:text-xl">A</span>
+            </div>
+            <span className="text-zinc-800 font-bold text-xl pt-1 sm:text-xl">
+              ppInventive
+            </span> */}
           </div>
 
-          <div className="hidden lg:flex gap-4 items-center ">
+          <div className="hidden relative lg:flex gap-4 items-center ">
             {navItems.map((item) => (
               <div
                 key={item.label}
-                className="relative group"
+                className=" group"
                 onMouseEnter={() => setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center py-5 gap-1 cursor-pointer text-sm hover:border-b-2 border-primary ease-in-out text-foreground hover:text-primary transition-colors w-fit ">
+                <button className="flex items-center py-5 gap-1 cursor-pointer text-sm border-b-2 border-white hover:border-primary ease-in-out text-foreground hover:text-primary transition-colors w-fit ">
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:hidden ease-in-out" />
                   <ChevronUp className="w-4 h-4 transition-transform hidden group-hover:block ease-in-out" />
@@ -104,7 +110,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.25, ease: "easeOut" }}
-                      className="absolute left-1/2 top-full -translate-x-1/2  w-[60vw] z-50"
+                      className="absolute top-full right-1/2 translate-x-[20%]  w-[90vw] z-50"
                     >
                       <div className="bg-white rounded-lg shadow-2xl mt-1 border border-gray-100 overflow-hidden">
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">

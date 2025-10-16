@@ -43,7 +43,7 @@ const achievementData = [
 
 const Industries = () => {
   return (
-    <div className="sm:px-28 gap-8">
+    <div className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 gap-8">
       <header className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
           Industries We Serve

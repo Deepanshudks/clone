@@ -1,5 +1,5 @@
-import AnnouncementBanner from "../../components/AnnouncementBanner";
-import Expertise from "../../components/Expertise";
+import AnnouncementBanner from "../../components/announcementBanner";
+import Expertise from "../../components/expertise";
 import Footer from "../../components/footer";
 import Hero from "../../components/hero";
 import Navbar from "../../components/navbar";
