@@ -1,85 +1,43 @@
-import { Box, Container, Typography } from "@mui/material";
-
 const TimelineSection = () => {
   const years = [
     2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,
   ];
 
   return (
-    <Box sx={{ py: 12, backgroundColor: "hsl(var(--background))" }}>
-      <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          sx={{
-            textAlign: "center",
-            color: "hsl(var(--foreground))",
-            mb: 8,
-            fontSize: { xs: "2.5rem", md: "3.5rem" },
-            fontWeight: 700,
-          }}
-        >
-          The <span style={{ color: "hsl(var(--primary))" }}>appinventiv</span>{" "}
-          Story
-        </Typography>
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-center text-gray-900 mb-16 font-bold text-3xl md:text-4xl">
+          The <span className="text-blue-600">appinventiv</span> Story
+        </h2>
 
-        {/* Timeline */}
-        <Box sx={{ position: "relative", mb: 8 }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              position: "relative",
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: "50%",
-                left: 0,
-                right: 0,
-                height: 2,
-                backgroundColor: "hsl(var(--muted))",
-                zIndex: 0,
-              },
-            }}
-          >
+        <div className="relative mb-16">
+          {/* Timeline line */}
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 -translate-y-1/2 z-0"></div>
+
+          {/* Timeline points */}
+          <div className="flex justify-between items-center relative z-10">
             {years.map((year, index) => (
-              <Box
-                key={year}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  zIndex: 1,
-                }}
-              >
-                <Box
-                  sx={{
-                    width: index === 0 ? 16 : 12,
-                    height: index === 0 ? 16 : 12,
-                    borderRadius: "50%",
-                    backgroundColor:
-                      index === 0 ? "hsl(var(--primary))" : "hsl(var(--muted))",
-                    mb: 2,
-                  }}
-                />
-                <Typography
-                  sx={{
-                    color:
-                      index === 0
-                        ? "hsl(var(--foreground))"
-                        : "hsl(var(--muted-foreground))",
-                    fontSize: { xs: "0.75rem", md: "1rem" },
-                    fontWeight: index === 0 ? 600 : 400,
-                  }}
+              <div key={year} className="flex flex-col items-center">
+                <div
+                  className={`mb-2 rounded-full ${
+                    index === 0 ? "bg-blue-600 w-4 h-4" : "bg-gray-400 w-3 h-3"
+                  }`}
+                ></div>
+                <span
+                  className={`text-center ${
+                    index === 0
+                      ? "text-gray-900 font-semibold text-sm md:text-base"
+                      : "text-gray-500 font-normal text-xs md:text-sm"
+                  }`}
                 >
                   {year}
-                </Typography>
-              </Box>
+                </span>
+              </div>
             ))}
-          </Box>
-        </Box>
-      </Container>
-    </Box>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

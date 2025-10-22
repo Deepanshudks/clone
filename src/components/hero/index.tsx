@@ -15,10 +15,10 @@ const Hero = () => {
       </div>
 
       <div className=" z-10 sm:max-w-[65%] flex flex-col items-start  sm:mpx-6 pt-40 gap-3 justify-end-safe ">
-        <h1 className="sm:text-4xl text-2xl font-semibold text-foreground leading-tight  animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <h1 className="sm:text-6xl text-4xl font-semibold text-foreground leading-tight  animate-in fade-in slide-in-from-bottom-4 duration-700">
           Engineering Precision. Powering Innovation.
         </h1>
-        <p className="text-foreground sm:text-lg text-md  py-4 font-medium tracking-wide">
+        <p className="text-foreground sm:text-lg text-lg   py-4 font-medium tracking-wide">
           We design and manufacture advanced mechanical, electrical, and
           electronic systems that power industrial and infrastructure
           excellence.
