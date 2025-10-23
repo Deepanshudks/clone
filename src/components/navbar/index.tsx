@@ -2,22 +2,33 @@ import { useState } from "react";
 import { ChevronDown, Menu, X, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = [
-  {
-    label: "InventivAI",
-    dropdown: [
-      { title: "Explore AI Tech Solutions", link: "#", featured: true },
-      { title: "AI Knowledge Hub", link: "#" },
-      { title: "Generative AI Development", link: "#" },
-      { title: "Generative AI Consulting", link: "#" },
-      { title: "AI Agent Development", link: "#" },
-      { title: "AI Integration", link: "#" },
-      { title: "ML Development", link: "#" },
-      { title: "Computer Vision", link: "#" },
-      { title: "AI Copilot Development", link: "#" },
-      { title: "RPA Development", link: "#" },
-    ],
-  },
+interface DropdownItem {
+  title: string;
+  link: string;
+  featured?: boolean;
+}
+
+interface NavItem {
+  label: string;
+  dropdown: DropdownItem[];
+}
+
+const navItems: NavItem[] = [
+  // {
+  //   label: "InventivAI",
+  //   dropdown: [
+  //     { title: "Explore AI Tech Solutions", link: "#", featured: true },
+  //     { title: "AI Knowledge Hub", link: "#" },
+  //     { title: "Generative AI Development", link: "#" },
+  //     { title: "Generative AI Consulting", link: "#" },
+  //     { title: "AI Agent Development", link: "#" },
+  //     { title: "AI Integration", link: "#" },
+  //     { title: "ML Development", link: "#" },
+  //     { title: "Computer Vision", link: "#" },
+  //     { title: "AI Copilot Development", link: "#" },
+  //     { title: "RPA Development", link: "#" },
+  //   ],
+  // },
   {
     label: "About",
     dropdown: [
@@ -110,7 +121,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.25, ease: "easeOut" }}
-                      className="absolute top-full right-1/2 translate-x-[20%]  w-[90vw] z-50"
+                      className="absolute top-full right-1/2 translate-x-[25%]  w-[90vw] z-50"
                     >
                       <div className="bg-white rounded-lg shadow-2xl mt-1 border border-gray-100 overflow-hidden">
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">

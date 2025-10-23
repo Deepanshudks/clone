@@ -1,5 +1,5 @@
 import AnnouncementBanner from "../../components/announcementBanner";
-import Expertise from "../../components/expertise";
+import ExpertiseSection from "../../components/Expertise";
 import Footer from "../../components/footer";
 import Hero from "../../components/hero";
 import Navbar from "../../components/navbar";
@@ -19,7 +19,7 @@ const Home = () => {
       <Partners />
       <StatsCards />
       <Industries />
-      <Expertise />
+      <ExpertiseSection />
       <WhyChooseUs />
       <Footer />
     </div>

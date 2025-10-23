@@ -15,15 +15,15 @@ const AnnouncementBanner = () => {
               duration: 20,
             }}
           >
-            We design and manufacture advanced mechanical, electrical, and
-            electronic systems that power industrial and infrastructure
-            excellence. &nbsp;&nbsp;&nbsp;
+            Delivering advanced mechanical, electrical, and electronic systems
+            for industrial, infrastructure, and energy applications.
+            &nbsp;&nbsp;&nbsp;
             <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
               EXPLORE NOW!
             </span>
-            &nbsp;&nbsp;&nbsp; We design and manufacture advanced mechanical,
-            electrical, and electronic systems that power industrial and
-            infrastructure excellence. &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp; Delivering advanced mechanical, electrical, and
+            electronic systems for industrial, infrastructure, and energy
+            applications. &nbsp;&nbsp;&nbsp;
             <span className="underline text-xs sm:text-sm mx-2 sm:mx-3">
               EXPLORE NOW!
             </span>

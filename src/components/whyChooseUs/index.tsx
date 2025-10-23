@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
                 <item.icon className="w-8 h-8 text-black flex-shrink-0" />
-                <h3 className="text-xl sm:text-2xl font-semibold flex-1">
+                <h3 className="text-xl sm:text-xl font-semibold flex-1">
                   {item.title}
                 </h3>
                 <ChevronRight className="w-6 h-6 text-black hidden sm:inline-block" />

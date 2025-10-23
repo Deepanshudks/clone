@@ -7,16 +7,14 @@ const StatsCards = () => {
       <div className="sm:px-28 p-4">
         <div className="grid grid-cols-1  gap-8 md:grid-cols-2">
           <p className="sm:text-4xl text-2xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,
-            quaerat eum.
+            At Precision Core Tech Solutions, every component we produce
+            reflects our commitment to accuracy, quality, and dependability.
           </p>
           <p className=" mx-auto font-medium text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,
-            quaerat eum. Ea, reiciendis ipsam repellendus, quis nemo adipisci
-            dignissimos minima ullam nam cum numquam. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Praesentium provident excepturi quod?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus laborum autem voluptates!
+            Founded with a vision to bridge innovation and industrial
+            reliability, we deliver customized, high-quality products that serve
+            critical sectors such as power, infrastructure, automation,
+            manufacturing, and research.
           </p>
         </div>
         <div className="py-4 sm:p-8 bg-[--color-background] font-sans">

@@ -1,9 +1,7 @@
 import AnnouncementBanner from "../../components/announcementBanner";
 import Navbar from "../../components/navbar";
 import AboutHero from "../../components/aboutHero";
-import AboutSection from "../../components/aboutSection";
-import ClientLogos from "../../components/clientLogos";
-import TimelineSection from "../../components/timelineSection";
+import AboutUs from "../../components/aboutUs";
 
 const About = () => {
   return (
@@ -11,9 +9,7 @@ const About = () => {
       <AnnouncementBanner />
       <Navbar />
       <AboutHero />
-      <AboutSection />
-      <TimelineSection />
-      <ClientLogos />
+      <AboutUs />
     </div>
   );
 };
