@@ -1,4 +1,4 @@
-import AnnouncementBanner from "../../components/announcementBanner";
+import AnnouncementBanner from "../../components/announcement";
 import ExpertiseSection from "../../components/Expertise";
 import Footer from "../../components/footer";
 import Hero from "../../components/hero";

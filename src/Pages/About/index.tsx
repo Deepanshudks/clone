@@ -1,7 +1,7 @@
-import AnnouncementBanner from "../../components/announcementBanner";
-import Navbar from "../../components/navbar";
 import AboutHero from "../../components/aboutHero";
 import AboutUs from "../../components/aboutUs";
+import AnnouncementBanner from "../../components/announcement";
+import Navbar from "../../components/navbar";
 
 const About = () => {
   return (
