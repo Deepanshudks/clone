@@ -17,7 +17,10 @@ const StatsCards = () => {
             manufacturing, and research.
           </p>
         </div>
-        <div className="py-4 sm:p-8 bg-[--color-background] font-sans">
+        <div
+          className="py-4 sm:p-8 bg-[--color-background] font-sans"
+          id="services"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12">
             {achievementData.map((item, index) => (
               <StatCard
@@ -30,7 +33,6 @@ const StatsCards = () => {
           </div>
         </div>
       </div>
-      <div className="h-12 bg-gradient-to-b from-white to white via-zinc-50"></div>
     </>
   );
 };

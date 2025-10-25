@@ -1,12 +1,11 @@
 import { Divider } from "@mui/material";
 import image1 from "../../assets/1st.svg";
-import image2 from "../../assets/2nd.svg";
 import image3 from "../../assets/3rd.svg";
 import image4 from "../../assets/4th.png";
 import image5 from "../../assets/5th.png";
 
 const Partners = () => {
-  const sources = [image1, image2, image3, image4, image5];
+  const sources = [image1, image3, image4, image5];
 
   return (
     <section className="bg-gradient-to-b from-[#687273] via-zinc-400 to-white backdrop-blur-xs py-10 w-full flex justify-center">

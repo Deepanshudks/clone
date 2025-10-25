@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <hr className="border-gray-700 my-10" />
+      <hr className="border-gray-600 my-4" />
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
         <div className="text-center md:text-left text-gray-400">

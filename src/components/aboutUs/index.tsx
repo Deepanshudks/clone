@@ -1,5 +1,6 @@
 import React from "react";
 import AboutSection from "../aboutSection";
+import Footer from "../footer";
 
 const AboutUs: React.FC = () => {
   return (
@@ -181,9 +182,7 @@ const AboutUs: React.FC = () => {
         </a>
       </section>
 
-      <footer className="bg-gray-800 text-white text-center py-6 mt-12">
-        © 2025 Precesion Core Tech Solutions Pvt. Ltd. All Rights Reserved.
-      </footer>
+      <Footer />
     </div>
   );
 };
