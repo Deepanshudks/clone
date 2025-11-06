@@ -54,7 +54,21 @@ const Navbar: React.FC = () => {
       <nav className="fixed top-13 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-semibold">Navbar</div>
+            <div
+              onClick={() => {
+                navigate("/");
+              }}
+              className="flex cursor-pointer items-center"
+            >
+              <div className="sm:w-8 sm:h-8 h-8 w-8 bg-primary rounded-sm flex items-center justify-center">
+                <span className="text-white font-bold text-sm sm:text-xl">
+                  P
+                </span>
+              </div>
+              <span className="text-zinc-800 font-bold text-xs pt-1 sm:text-xl">
+                recesion Core Tech Solutions Pvt. Ltd.
+              </span>
+            </div>
 
             <div className="hidden lg:flex gap-6 items-center">
               {navItems.map((item) => (
