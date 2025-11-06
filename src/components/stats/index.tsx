@@ -4,8 +4,8 @@ import { StatCard } from "../statsCard";
 const StatsCards = () => {
   return (
     <>
-      <div className="sm:px-28 p-4">
-        <div className="grid grid-cols-1  gap-8 md:grid-cols-2">
+      <div className="sm:px-28 p-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <p className="sm:text-4xl text-2xl">
             At Precision Core Tech Solutions, every component we produce
             reflects our commitment to accuracy, quality, and dependability.
@@ -25,7 +25,6 @@ const StatsCards = () => {
             {achievementData.map((item, index) => (
               <StatCard
                 key={index}
-                metric={item.metric.toString()}
                 title={item.title}
                 description={item.description}
               />
