@@ -1,4 +1,6 @@
 import { Button } from "@mui/material";
+import { Mail } from "lucide-react";
+import { Email } from "../../mock/shared";
 
 export default function Footer() {
   return (
@@ -10,6 +12,10 @@ export default function Footer() {
           </h3>
           <p className="text-gray-300 text-sm md:text-base">
             Engineering Precision. Powering Innovation.
+          </p>
+          <p className=" text-sm items-center flex gap-1">
+            <Mail className="h-5 w-5 !text-gray-300" />{" "}
+            <span className="text-gray-300">{Email}</span>
           </p>
         </div>
 

@@ -63,9 +63,7 @@ export default function WhyChooseUs() {
               <h2 className="text-2xl sm:text-3xl font-bold mb-2">
                 Fuel Your Digital-First Idea
               </h2>
-              <p className="text-gray-600 mb-4 sm:mb-6">
-                With 1600+ Transformation Experts
-              </p>
+
               <Button
                 variant="contained"
                 className="bg-blue-500 text-white px-5 py-2 sm:px-6 sm:py-3  rounded-md font-semibold"

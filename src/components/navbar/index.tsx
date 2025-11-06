@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item)}
-                  className="py-5 text-sm border-b-2 border-transparent hover:border-primary text-gray-700 hover:text-primary transition-colors"
+                  className="py-5 text-sm cursor-pointer border-b-2 border-transparent hover:border-primary text-gray-700 hover:text-primary transition-colors"
                 >
                   {item.label}
                 </button>

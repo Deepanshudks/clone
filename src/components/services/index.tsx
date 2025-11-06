@@ -6,37 +6,37 @@ const achievementData = [
   {
     label: "Power & Energy",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "Reliable power management and custom AC/DC supply solutions for industrial automation and control systems engineered for efficiency, stability, and uninterrupted performance.",
     icon: <Zap size={36} />,
   },
   {
     label: "Industrial Automation",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "End-to-end automation components, control systems, and embedded solutions that enhance productivity, accuracy, and operational efficiency across industrial applications.",
     icon: <Cpu size={36} />,
   },
   {
     label: "Infrastructure & Utilities",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "Comprehensive systems and assemblies supporting power, water, and public infrastructure built for long-term reliability and compliance with industrial safety standards.",
     icon: <Building size={36} />,
   },
   {
     label: "Manufacturing & Process Plants",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "Custom-engineered mechanical, hydraulic, and electronic systems that ensure smooth plant operations, optimized performance, and reduced downtime.",
     icon: <Factory size={36} />,
   },
   {
     label: "Defense and Research Applications",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "Precision-built components and subsystems tailored for defense, aerospace, and R&D environments ensuring high performance in demanding and mission-critical applications.",
     icon: <Shield size={36} />,
   },
   {
     label: "Engineering Services & System Integrators",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi modi odit corrupti repellat iusto, ad, aspernatur inventore tempore earum libero perspiciatis vitae.",
+      "Collaborative design, manufacturing, and integration support for engineering firms and system integrators offering a single-window solution from concept to commissioning.",
     icon: <Settings size={36} />,
   },
 ];

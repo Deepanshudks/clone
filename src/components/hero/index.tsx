@@ -1,6 +1,7 @@
 import heroBackground from "../../assets/hero-background.jpg";
 import { Button } from "@mui/material";
 import { ChevronRight } from "lucide-react";
+import { Email } from "../../mock/shared";
 
 const Hero = () => {
   return (
@@ -24,15 +25,17 @@ const Hero = () => {
           excellence.
         </p>
         <div>
-          <Button
-            variant="contained"
-            className="!rounded-xl !normal-case !px-6 !py-3 !bg-primary  flex items-center gap-2 group"
-          >
-            Consult Our Experts
-            <span className="inline-block transition-all duration-800 animate-horizontal">
-              <ChevronRight />
-            </span>
-          </Button>
+          <a href={`mailto:${Email}`} className="inline-block no-underline">
+            <Button
+              variant="contained"
+              className="!rounded-xl !normal-case !px-6 !py-3 !bg-primary flex items-center gap-2 group hover:!bg-blue-700 transition duration-300"
+            >
+              Consult Our Experts
+              <span className="inline-block transition-all duration-800 animate-horizontal group-hover:translate-x-1">
+                <ChevronRight />
+              </span>
+            </Button>
+          </a>
         </div>
       </div>
     </section>
