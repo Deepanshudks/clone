@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -12,14 +12,17 @@ const navItems: NavItem[] = [
   { label: "About", link: "/about" },
   { label: "Services", link: "services" },
   { label: "Industries", link: "industries" },
-  { label: "Expertise ", link: "expertise " },
+  { label: "Expertise", link: "expertise" },
 ];
 
 const Navbar: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "auto";
+  }, [mobileOpen]);
 
   const handleNavClick = (item: NavItem) => {
     if (item.link.startsWith("/")) {
@@ -28,8 +31,11 @@ const Navbar: React.FC = () => {
       const scrollToSection = () => {
         const section = document.getElementById(item.link);
         if (section) {
-          const sectionTop = section.getBoundingClientRect().top;
-          window.scrollTo({ top: sectionTop, behavior: "smooth" });
+          const sectionTop = section.offsetTop;
+          window.scrollTo({
+            top: sectionTop - 120,
+            behavior: "smooth",
+          });
         }
       };
 
@@ -44,58 +50,48 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-13 sm:top-15 left-0 right-0 z-50 bg-white text-zinc-800 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* <div className="text-2xl font-semibold">Navbar</div> */}
-          <div
-            onClick={() => {
-              navigate("/");
-            }}
-            className="flex cursor-pointer items-center"
-          >
-            <div className="sm:w-8 sm:h-8 h-6 w-6 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-sm sm:text-xl">P</span>
+    <>
+      <nav className="fixed top-13 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-between h-16">
+            <div className="text-2xl font-semibold">Navbar</div>
+
+            <div className="hidden lg:flex gap-6 items-center">
+              {navItems.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item)}
+                  className="py-5 text-sm border-b-2 border-transparent hover:border-primary text-gray-700 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
-            <span className="text-zinc-800 font-bold text-md pt-1 sm:text-xl">
-              recesion Core Tech Solutions Pvt. Ltd.
-            </span>
-          </div>
 
-          <div className="hidden lg:flex gap-6 items-center">
-            {navItems.map((item) => (
+            <div className="lg:hidden">
               <button
-                key={item.label}
-                onClick={() => handleNavClick(item)}
-                className="py-5 gap-1 cursor-pointer text-sm border-b-2 border-white hover:border-primary text-foreground hover:text-primary transition-colors w-fit"
+                className="p-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileOpen(!mobileOpen)}
               >
-                {item.label}
+                {mobileOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
-            ))}
-          </div>
-
-          <div className="lg:hidden">
-            <button
-              className="p-2 rounded-md hover:bg-gray-100"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-white shadow-md border-t border-gray-100"
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-28 left-0 right-0 bottom-0 z-40 bg-white overflow-y-auto shadow-md"
           >
             <div className="flex flex-col px-4 pb-4">
-              {navItems.map((item, i) => (
-                <div key={i} className="border-b border-gray-100">
+              {navItems.map((item) => (
+                <div key={item.label} className="border-b border-gray-100">
                   <button
                     onClick={() => handleNavClick(item)}
                     className="w-full flex justify-between items-center py-3 text-left font-medium text-gray-800"
@@ -108,7 +104,7 @@ const Navbar: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
 
