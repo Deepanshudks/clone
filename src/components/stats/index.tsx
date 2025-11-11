@@ -7,7 +7,7 @@ const StatsCards = () => {
       <div className="sm:px-28 p-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <p className="sm:text-4xl text-2xl">
-            At Precision Core Tech Solutions, every component we produce
+            At Precesion Core Tech Solutions, every component we produce
             reflects our commitment to accuracy, quality, and dependability.
           </p>
           <p className=" mx-auto font-medium text-lg">

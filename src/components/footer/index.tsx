@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-16">
         <div className="flex-1 flex flex-col gap-4 text-center md:text-left">
           <h3 className="uppercase font-bold tracking-widest text-lg md:text-xl">
-            PRECISION CORE TECH SOLUTIONS
+            PRECESION CORE TECH SOLUTIONS
           </h3>
           <p className="text-gray-300 text-sm md:text-base">
             Engineering Precision. Powering Innovation.

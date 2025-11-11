@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
     <div className="w-full font-sans text-gray-800">
       <section className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-28 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Precision Core Tech Solutions Pvt. Ltd.
+          PrecesionCore Tech Solutions Pvt. Ltd.
         </h1>
         <p className="text-xl sm:text-2xl mb-6">
           Engineering Precision. Powering Progress.

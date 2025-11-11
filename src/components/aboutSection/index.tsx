@@ -119,7 +119,7 @@ const AboutSection: React.FC = () => {
           integrated approach combines engineering design, fabrication, and
           system integration under one roof allowing us to deliver complete
           solutions that meet complex technical and operational needs. At
-          Precision Core Tech Solutions, every component we produce reflects our
+          Precesion Core Tech Solutions, every component we produce reflects our
           commitment to accuracy, quality, and dependability.
         </div>
       </div>
