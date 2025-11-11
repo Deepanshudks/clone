@@ -1,7 +1,7 @@
 import heroBackground from "../../assets/hero-background.jpg";
 import { Button } from "@mui/material";
 import { ChevronRight } from "lucide-react";
-import { Email } from "../../mock/shared";
+import { FORM_LINK } from "../../mock/shared";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
           excellence.
         </p>
         <div>
-          <a href={`mailto:${Email}`} className="inline-block no-underline">
+          <a href={FORM_LINK} className="inline-block no-underline">
             <Button
               variant="contained"
               className="!rounded-xl !normal-case !px-6 !py-3 !bg-primary flex items-center gap-2 group hover:!bg-blue-700 transition duration-300"

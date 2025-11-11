@@ -9,6 +9,7 @@ import {
   PlaneTakeoff,
   ChevronRight,
 } from "lucide-react";
+import { FORM_LINK } from "../../mock/shared";
 
 const reasonsData = [
   {
@@ -63,13 +64,14 @@ export default function WhyChooseUs() {
               <h2 className="text-2xl sm:text-3xl font-bold mb-2">
                 Fuel Your Digital-First Idea
               </h2>
-
-              <Button
-                variant="contained"
-                className="bg-blue-500 text-white px-5 py-2 sm:px-6 sm:py-3  rounded-md font-semibold"
-              >
-                Innovate With Us
-              </Button>
+              <a href={FORM_LINK}>
+                <Button
+                  variant="contained"
+                  className="bg-blue-500 text-white px-5 py-2 sm:px-6 sm:py-3  rounded-md font-semibold"
+                >
+                  Innovate With Us
+                </Button>
+              </a>
             </div>
           </div>
         </div>

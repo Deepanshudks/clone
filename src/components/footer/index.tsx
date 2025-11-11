@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { Mail } from "lucide-react";
-import { Email } from "../../mock/shared";
+import { Email, FORM_LINK } from "../../mock/shared";
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
             partnerships. Please use the enquiry form linked below for all
             communication.
           </p>
-          <a href={`mailto:${Email}`} className="inline-block no-underline">
+          <a href={FORM_LINK} className="inline-block no-underline">
             <Button
               variant="contained"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300"

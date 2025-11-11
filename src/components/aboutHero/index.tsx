@@ -3,14 +3,12 @@ import heroBackground from "../../assets/hero-background.jpg";
 const AboutHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroBackground}
           alt="Hero background"
           className="w-full h-full object-cover scale-105 animate-in fade-in duration-1000"
         />
-        {/* Subtle Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/90 backdrop-blur-md" />
       </div>
 
@@ -35,7 +33,7 @@ const AboutHero = () => {
           className="
             mt-6
             sm:text-lg text-base
-            text-muted-foreground
+            text-zinc-600
             max-w-3xl
             leading-relaxed
             animate-in fade-in slide-in-from-bottom-10

@@ -1,6 +1,6 @@
-import { Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import { Email } from "../../mock/shared";
+import { FORM_LINK } from "../../mock/shared";
 
 const AnnouncementBanner = () => {
   return (
@@ -32,10 +32,10 @@ const AnnouncementBanner = () => {
         </div>
         <div>
           <a
-            href={`mailto:${Email}`}
+            href={FORM_LINK}
             className="flex items-center cursor-pointer justify-center space-x-1 text-[0.65rem] sm:text-[0.875rem] font-medium normal-case rounded-md px-2 sm:px-4 !py-1.5 !sm:py-2 !w-36 sm:w-28 md:w-full bg-white text-blue-700 hover:bg-blue-50 transition-all no-underline"
           >
-            <Phone className="w-4 h-4 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+            <Mail className="w-4 h-4 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
             <span>Contact Us</span>
           </a>
         </div>

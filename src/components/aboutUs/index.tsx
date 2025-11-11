@@ -1,6 +1,7 @@
 import React from "react";
 import AboutSection from "../aboutSection";
 import Footer from "../footer";
+import { FORM_LINK } from "../../mock/shared";
 
 const AboutUs: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const AboutUs: React.FC = () => {
           industrial, infrastructure, and energy applications.
         </p>
         <a
-          href="#contact"
+          href={FORM_LINK}
           className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
         >
           Contact Now
@@ -173,7 +174,7 @@ const AboutUs: React.FC = () => {
           below.
         </p>
         <a
-          href="https://forms.gle/your-google-form-link"
+          href={FORM_LINK}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
